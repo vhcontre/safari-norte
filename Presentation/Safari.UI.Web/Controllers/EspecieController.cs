@@ -13,7 +13,7 @@ namespace Safari.UI.Web.Controllers
         // GET: Especie
         public ActionResult Index()
         {
-            var ep = new EspecieProcess();
+            var ep = new EspecieProcess();           
             return View(ep.ListarTodos());
         }
 

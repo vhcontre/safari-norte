@@ -8,6 +8,7 @@ namespace Safari.UI.Web.Controllers
 {
     public class HomeController : Controller
     {
+        [HttpGet]
         public ActionResult Index()
         {
             return View();
