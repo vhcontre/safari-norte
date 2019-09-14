@@ -1,4 +1,5 @@
 using Safari.Entities;
+using Safari.Framework.Common;
 using Safari.Services;
 using Safari.Services.Contracts;
 using System;
@@ -9,12 +10,17 @@ using System.ServiceModel;
 namespace Safari.UI.Process
 {    
     public partial class EspecieProcess : ProcessComponent
-    {       
+    {
+        private IEspecieService _especieService;
+
+        public EspecieProcess()
+        {
+            _especieService = ServiceFactory.Get<IEspecieService>(); ;
+        }
         public List<Especie> ListarTodos()
         {
-            List<Especie> result = default(List<Especie>);
-            IEspecieService proxy = new EspecieService();
-            
+            List<Especie> result = default(List<Especie>);            
+            var proxy = _especieService;
             try
             {
                 result = proxy.ListarTodos();
@@ -29,7 +35,7 @@ namespace Safari.UI.Process
         public Especie Agregar(Especie especie)
         {
             Especie result = default(Especie);
-            IEspecieService proxy = new EspecieService();
+            var proxy = ServiceFactory.Get<IEspecieService>();
 
             try
             {

@@ -1,4 +1,5 @@
-﻿using Safari.UI.Process;
+﻿
+using Safari.UI.Process;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,7 +11,7 @@ namespace Safari.UI.Web.Controllers
     [Authorize]
     public class EspecieController : Controller
     {
-        // GET: Especie
+       
         public ActionResult Index()
         {
             var ep = new EspecieProcess();           

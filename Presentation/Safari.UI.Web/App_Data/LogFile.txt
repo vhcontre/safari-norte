@@ -1,0 +1,6 @@
+07/09/2019 01:18:10 | Safari.UI.Web.dll | Index | Safari.UI.Web.Controllers.EspecieController | 20 | Consultar todas las especies
+07/09/2019 01:18:10 | Safari.Data.dll | Read | Safari.Data.EspecieDAC | 52 | The connection string for the database 'vacio' does not exist or does not have a valid provider. INNER EXCEPTION: The requested database vacio is not defined in configuration.
+07/09/2019 01:21:02 | Safari.UI.Web.dll | Index | Safari.UI.Web.Controllers.EspecieController | 21 | Consultar todas las especies
+07/09/2019 01:21:02 | Safari.Data.dll | Read | Safari.Data.EspecieDAC | 52 | The connection string for the database 'vacio' does not exist or does not have a valid provider. INNER EXCEPTION: The requested database vacio is not defined in configuration.
+07/09/2019 01:21:09 | Safari.UI.Web.dll | Index | Safari.UI.Web.Controllers.EspecieController | 21 | Consultar todas las especies
+07/09/2019 01:21:09 | Safari.Data.dll | Read | Safari.Data.EspecieDAC | 52 | The connection string for the database 'vacio' does not exist or does not have a valid provider. INNER EXCEPTION: The requested database vacio is not defined in configuration.
