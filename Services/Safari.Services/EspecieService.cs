@@ -11,16 +11,35 @@ namespace Safari.Services
     [ServiceBehavior(InstanceContextMode = InstanceContextMode.PerCall, ConcurrencyMode = ConcurrencyMode.Multiple)]
     public class EspecieService : IEspecieService
     {
-        public Especie Agregar(Especie especie)
+        public Especie Add(Especie especie)
         {
             var bc = new EspecieComponent();
-            return bc.Agregar(especie);
+            return bc.Add(especie);
+        }        
+
+        public void Edit(Especie especie)
+        {
+            var bc = new EspecieComponent();
+            bc.Edit(especie);
         }
 
-        public List<Especie> ListarTodos()
+        public Especie Find(int? id)
         {
             var bc = new EspecieComponent();
-            return bc.ListarTodos();
+            return bc.Find(id);
+        }
+        
+
+        public void Remove(Especie especie)
+        {
+            var bc = new EspecieComponent();
+            bc.Remove(especie);
+        }
+
+        public List<Especie> ToList()
+        {
+            var bc = new EspecieComponent();
+            return bc.ToList();
         }
     }
 }

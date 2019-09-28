@@ -11,9 +11,15 @@ namespace Safari.Services.Contracts
     public interface IEspecieService
     {
         [OperationContract]
-        Especie Agregar(Especie especie);
-
+        Especie Add(Especie especie);
         [OperationContract]
-        List<Especie> ListarTodos();
+        List<Especie> ToList();
+        [OperationContract]
+        Especie Find(int? id);
+        [OperationContract]
+        void Edit(Especie especie);
+        [OperationContract]
+        void Remove(Especie especie);
+
     }
 }

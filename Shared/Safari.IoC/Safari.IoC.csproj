@@ -110,6 +110,10 @@
       <Project>{C1742601-B74E-492E-9465-C4465D9AE02D}</Project>
       <Name>Safari.Services</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Safari.Framework\Safari.Framework.csproj">
+      <Project>{CE444DAE-9CBC-4F1D-9049-09489620BF63}</Project>
+      <Name>Safari.Framework</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

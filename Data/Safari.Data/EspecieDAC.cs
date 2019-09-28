@@ -7,6 +7,8 @@ using System.Data;
 using System.Data.Common;
 using Microsoft.Practices.EnterpriseLibrary.Data;
 using Safari.Entities;
+using Safari.Framework.Common;
+using Safari.Framework.Logging;
 
 namespace Safari.Data
 {
@@ -14,13 +16,23 @@ namespace Safari.Data
     {
         public Especie Create(Especie especie)
         {
-            const string SQL_STATEMENT = "INSERT INTO Especie ([Nombre]) VALUES(@Nombre); SELECT SCOPE_IDENTITY();";
+            const string SQL_STATEMENT = "INSERT INTO _Especie_([Nombre]) VALUES(@Nombre); SELECT SCOPE_IDENTITY();";
 
-            var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
-            using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+            try
             {
-                db.AddInParameter(cmd, "@Nombre", DbType.AnsiString, especie.Nombre);
-                especie.Id = Convert.ToInt32(db.ExecuteScalar(cmd));
+                var db = DatabaseFactory.CreateDatabase(CONNECTION_NAME);
+                using (DbCommand cmd = db.GetSqlStringCommand(SQL_STATEMENT))
+                {
+                    db.AddInParameter(cmd, "@Nombre", DbType.AnsiString, especie.Nombre);
+                    especie.Id = Convert.ToInt32(db.ExecuteScalar(cmd));
+                }
+            }
+            catch (Exception ex)
+            {
+                var log = ServiceFactory.Get<ILoggingService>();
+                log.Error(ex); //Trace
+                var wrapper = new Exception("Error personalizado por el Usuario.", ex);
+                throw wrapper;
             }
             return especie;
         }
