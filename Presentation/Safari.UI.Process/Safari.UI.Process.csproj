@@ -61,6 +61,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="EspecieApiProcess.cs" />
     <Compile Include="EspecieProcess.cs" />
     <Compile Include="MediaType.cs" />
     <Compile Include="ProcessComponent.cs" />

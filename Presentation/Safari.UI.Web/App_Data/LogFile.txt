@@ -1,1 +1,9 @@
 28/09/2019 00:11:05 | Safari.Data.dll | Create | Safari.Data.EspecieDAC | 33 | El nombre de objeto '_Especie_' no es válido.
+25/10/2019 22:18:55 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+25/10/2019 22:19:57 | Safari.Data.dll | Create | Safari.Data.EspecieDAC | 33 | El nombre de objeto '_Especie_' no es válido.
+26/10/2019 00:40:23 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+26/10/2019 00:40:55 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+26/10/2019 00:41:47 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+26/10/2019 00:46:32 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+26/10/2019 01:04:59 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
+26/10/2019 01:06:02 | Safari.UI.Web.dll | Application_Start | Safari.UI.Web.MvcApplication | 25 | Init Application Start
